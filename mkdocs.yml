@@ -1,7 +1,7 @@
 site_name: QBank Connect API Documentation
-site_url: https://docs.qbankconnect.com/
-repo_url: https://github.com/qbank/connect-api
-repo_name: qbank/connect-api
+site_url: https://aitw.github.io/qapi-docs/
+repo_url: https://github.com/aiTechnicalWriter/qapi-docs
+repo_name: qapi-docs
 theme:
   name: material
   features:
