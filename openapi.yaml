@@ -1,0 +1,244 @@
+openapi: 3.1.0
+info:
+  title: QBank Connect API
+  version: v1
+  description: The official B2B API for ERP integration with QBank core banking services.
+servers:
+  - url: https://api.qbankconnect.com/v1
+security:
+  - OAuth2ClientCredentials:
+      - accounts.read
+      - transactions.read
+      - payments.ach.write
+      - positivepay.write
+paths:
+  /accounts:
+    get:
+      tags:
+        - Core Data
+      summary: List authorized accounts
+      operationId: listAccounts
+      responses:
+        '200':
+          description: A list of bank accounts.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Account'
+  /transactions:
+    get:
+      tags:
+        - Core Data
+      summary: Retrieve transaction history
+      operationId: listTransactions
+      parameters:
+        - in: query
+          name: accountId
+          schema:
+            type: string
+            format: uuid
+          required: true
+        - in: query
+          name: postingDateGte
+          schema:
+            type: string
+            format: date
+          description: Filter transactions posted on or after this date.
+      responses:
+        '200':
+          description: A list of transactions, reflecting data as of the nightly cutoff.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Transaction'
+  /balances/{accountId}:
+    get:
+      tags:
+        - Real-Time Inquiry
+      summary: Get current account balance
+      operationId: getBalance
+      parameters:
+        - in: path
+          name: accountId
+          schema:
+            type: string
+            format: uuid
+          required: true
+      responses:
+        '200':
+          description: Real-time balance data from Fiserv CoreAdvance.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Balance'
+  /payments/ach:
+    post:
+      tags:
+        - Payments
+      summary: Create an ACH transfer
+      operationId: createAchPayment
+      parameters:
+        - $ref: '#/components/parameters/IdempotencyKey'
+        - $ref: '#/components/parameters/AuthDate'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PaymentRequest'
+      responses:
+        '202':
+          description: Request accepted for asynchronous processing (mETL batch job).
+        '409':
+          description: Conflict due to outstanding request with the same Idempotency-Key.
+          headers:
+            Link:
+              description: 'Link to documentation on conflict resolution. Example: <https://docs.qbankconnect.com/03_payment_workflow/#idempotency-protocol>; rel="describedby"'
+              schema:
+                type: string
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/IdempotencyError'
+
+components:
+  securitySchemes:
+    OAuth2ClientCredentials:
+      type: oauth2
+      description: Server-to-server flow for B2B applications (ERP platforms).
+      flows:
+        clientCredentials:
+          tokenUrl: https://auth.qbankconnect.com/token
+          scopes:
+            accounts.read: Read account metadata and settings.
+            payments.ach.write: Submit new ACH files for processing.
+  parameters:
+    IdempotencyKey:
+      in: header
+      name: Idempotency-Key
+      schema:
+        type: string
+        format: uuid
+      required: true
+      description: Unique key (UUID v4 recommended) ensuring exactly-once execution for transactional requests.
+    AuthDate:
+      in: header
+      name: x-fapi-auth-date
+      schema:
+        type: string
+        format: http-date
+      required: false
+      description: The time when the Payment Service User (PSU) last logged in. Required for audit compliance on write operations (POST/PUT/PATCH).
+  schemas:
+    Account:
+      type: object
+      properties:
+        account_id:
+          type: string
+          format: uuid
+          description: QBank Connect unique identifier.
+        friendly_name:
+          type: string
+          description: User-defined name for the account.
+        account_type:
+          type: string
+          enum:
+            - Checking
+            - Savings
+            - Treasury
+        currency:
+          type: string
+          description: Currency of the account (ISO 4217).
+        status:
+          type: string
+          enum:
+            - Active
+            - Closed
+    Transaction:
+      type: object
+      properties:
+        transaction_id:
+          type: string
+          format: uuid
+          description: Unique QBank identifier for the transaction record.
+        amount:
+          type: number
+          format: float
+        description:
+          type: string
+        transaction_date:
+          type: string
+          format: date-time
+          description: The actual date/time the transaction was initiated.
+        value_date:
+          type: string
+          format: date
+          description: The date funds are applied for interest calculation (Core system defined).
+        posting_date:
+          type: string
+          format: date-time
+          description: The date/time the record was ingested into the QBank Connect DB via mETL (Daily Cutoff).
+        status:
+          type: string
+          enum:
+            - POSTED
+            - PENDING
+            - REVERSED
+    Balance:
+      type: object
+      properties:
+        account_id:
+          type: string
+          format: uuid
+        available_balance:
+          type: number
+          format: float
+          description: Funds available for immediate use.
+        ledger_balance:
+          type: number
+          format: float
+          description: Account total before holds or pending items.
+        last_updated_timestamp:
+          type: string
+          format: date-time
+          description: Timestamp confirming freshness of real-time data.
+    PaymentRequest:
+      type: object
+      properties:
+        source_account_id:
+          type: string
+          format: uuid
+        recipient_details:
+          type: object
+        amount:
+          type: number
+          format: float
+        effective_date:
+          type: string
+          format: date
+          description: The date the ACH is intended to settle.
+    IdempotencyError:
+      type: object
+      properties:
+        type:
+          type: string
+          description: A URI reference that identifies the problem type.
+        title:
+          type: string
+          description: "A short, human-readable summary of the problem type."
+          example: "A request is outstanding for this Idempotency-Key"
+        status:
+          type: integer
+          format: int32
+          description: The HTTP status code (409).
+        detail:
+          type: string
+          description: A human-readable explanation specific to this occurrence.
+        instance:
+          type: string
+          format: uuid
+          description: A unique identifier for this specific error occurrence.
