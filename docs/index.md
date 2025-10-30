@@ -1,3 +1,12 @@
+# DISCLAIMER
+Note: The QBank Connect API and all associated business entities and data examples referenced in this documentation are entirely **fictional** and have been created for the sole purpose of demonstrating:
+* Skill in API Documentation
+* Skill in SDK Documentation
+* Skill in Docs-as-Code workflows and tooling
+* General technical writing skills
+
+---
+
 # Welcome to QBank Connect API
 
 The QBank Connect API provides secure, reliable, and real-time access to core banking services, empowering ERP and treasury platforms to seamlessly integrate financial operations.

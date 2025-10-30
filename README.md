@@ -4,9 +4,15 @@
 [![Documentation Build](https://img.shields.io/badge/docs-deployed-success.svg)](https://aitechnicalwriter.github.io/qapi-docs/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-The official technical documentation for the QBank Connect API, covering conceptual architecture, integration guides, and regulatory compliance.
+--- 
+
+## ⚠️ DISCLAIMER
+
+This documentation refers to **QBank Connect**, a **fictional financial institution and API**. This project was created strictly for **technical writing portfolio demonstration purposes** and does not interact with any real-world banking services, data, or systems.
 
 ---
+
+The official technical documentation for the QBank Connect API, covering conceptual architecture, integration guides, and regulatory compliance.
 
 ## View Live Documentation
 
@@ -72,6 +78,6 @@ mkdocs gh-deploy
 
 ## License
 
-This documentation is released under the **MIT License**.  For more information, please see the [LICENSE](LICENSE) file.
+This documentation is released under the **MIT License**. For more information, please see the [LICENSE](LICENSE) file.
 
 
