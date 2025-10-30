@@ -8,13 +8,13 @@ The official technical documentation for the QBank Connect API, covering concept
 
 ---
 
-## 🌐 View Live Documentation
+## View Live Documentation
 
 The complete, rendered documentation website is hosted on GitHub Pages:
 
-**➡️ [QBank Connect Docs](https://aitechnicalwriter.github.io/qapi-docs/)**
+**[QBank Connect Docs](https://aitechnicalwriter.github.io/qapi-docs/)**
 
-## 📚 About This Repository
+## About This Repository
 
 This repository hosts the source files for the QBank Connect API documentation website.
 
@@ -25,7 +25,7 @@ This repository hosts the source files for the QBank Connect API documentation w
 * **SDK Integration:** Detailed guides and code examples for the official $\text{Python}$ and $\text{TypeScript}$ SDKs, emphasizing idiomatic error and idempotency handling.
 * **API Reference:** OpenAPI specification and structured endpoints.
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 This documentation project is built using modern technical writing tools:
 
@@ -34,7 +34,7 @@ This documentation project is built using modern technical writing tools:
 * **Styling:** Custom $\text{CSS}$ for professional heading borders and typography.
 * **Deployment:** $\text{GitHub}$ Pages via the `mkdocs gh-deploy` command.
 
-## ⚙️ Development and Local Setup
+## Development and Local Setup
 
 To run and edit this documentation locally, you need Python and `pip`.
 
@@ -70,6 +70,6 @@ When changes are complete and committed to the `master` branch, deploy the site 
 mkdocs gh-deploy
 ```
 
-## 📄 License
+## License
 
 This documentation is released under the **MIT License**. For more information, please see the [LICENSE](LICENSE) file.
