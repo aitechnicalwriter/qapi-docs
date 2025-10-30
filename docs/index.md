@@ -1,8 +1,12 @@
 # DISCLAIMER
 Note: The QBank Connect API and all associated business entities and data examples referenced in this documentation are entirely **fictional** and have been created for the sole purpose of demonstrating:
-* Skill in API Documentation
-* Skill in SDK Documentation
-* Skill in Docs-as-Code workflows and tooling
+
+* Skill in API documentation
+
+* Skill in SDK documentation
+
+* Skill in docs-as-code workflows and tooling
+
 * General technical writing skills
 
 ---
