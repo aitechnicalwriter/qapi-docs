@@ -1,6 +1,6 @@
 # QBank Connect API Documentation
 
-[![GitHub Pages Status](https://github.com/aitechnicalwriter/qapi-docs/workflows/github%20pages/badge.svg)](https://aitechnicalwriter.github.io/qapi-docs/)
+[![GitHub Pages deployment status](https://github.com/aitechnicalwriter/qapi-docs/actions/workflows/pages/badge.svg)](https://github.com/aitechnicalwriter/qapi-docs/actions/workflows/pages.yml)
 [![Documentation Build](https://img.shields.io/badge/docs-deployed-success.svg)](https://aitechnicalwriter.github.io/qapi-docs/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
