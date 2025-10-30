@@ -72,4 +72,6 @@ mkdocs gh-deploy
 
 ## License
 
-This documentation is released under the **MIT License**. For more information, please see the [LICENSE](LICENSE) file.
+This documentation is released under the **MIT License**.  For more information, please see the [LICENSE](LICENSE) file.
+
+
