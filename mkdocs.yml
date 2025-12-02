@@ -1,0 +1,47 @@
+site_name: QBank Connect API Documentation
+site_url: https://aitw.github.io/qapi-docs/
+repo_url: https://github.com/aiTechnicalWriter/qapi-docs
+repo_name: qapi-docs
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - content.code.annotate
+    - content.code.copy
+    - navigation.expand
+    - content.tabs.link # Recommended for general content flow
+    - content.diagrams  # CRITICAL: This enables Mermaid rendering in the theme
+  logo: assets/images/q_icon.png
+
+extra_css:
+  - assets/css/custom.css
+  
+nav:
+  - Welcome: index.md
+  - Getting Started: 01_getting_started.md
+  - Conceptual Guides:
+    - Architecture Overview: conceptual_guides/02_conceptual_architecture.md
+    - Payment Workflows: conceptual_guides/03_payment_workflow.md
+  - Compliance & Security: 04_compliance_security.md
+  - API Reference: 05_api_reference.md
+  - SDK Integration:
+    - Python SDK: sdk_integration/sdk_python.md
+    - TypeScript SDK: sdk_integration/sdk_typescript.md
+  - Glossary: 06_glossary.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - footnotes
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
