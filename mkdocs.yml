@@ -25,7 +25,7 @@ nav:
     - Architecture: explanations/02_architecture.md
     - Payment Resilience: explanations/03_payment_resilience.md
   - References:
-    - API Reference: api-viewer/index.html
+    - API Reference: openapi-spec/index.html
     - Python SDK: references/06_sdk_python.md
     - TypeScript SDK: references/07_sdk_typescript.md
     - Compliance & Security: references/08_compliance_security.md
