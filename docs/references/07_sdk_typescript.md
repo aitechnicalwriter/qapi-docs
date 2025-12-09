@@ -89,7 +89,7 @@ Using strong type checking (e.g. Zod Schemas), the SDK makes the inputs and outp
 In addition to translating all status code based API errors (e.g. 400, 403, 409) to **Named Error Classes** (`IdempotencyKeyConflictError`, `PermissionDeniedError`), this abstraction enables developers to **programmatically handle failures** using `try/catch` blocks without having to parse raw HTTP status codes or error messages. [^1]
 
 
-## References
+## Documents Cited
 
 [^1]: QBank TypeScript SDK Readme, "Core Features and Design Principles (Developer Experience)."
 [^2]: TypeScript SDK Source Code, `src/client.ts` (Client Initialization).

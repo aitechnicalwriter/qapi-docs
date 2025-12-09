@@ -71,7 +71,7 @@ The Python SDK uses Pydantic Models to define data objects.[^30] This means that
 In addition, the SDK converts all generic HTTP status codes (e.g., 403, 409, 500) into specific, named exceptions (e.g., `QBankIdempotencyConflict` for a 409).[^30] Developers are able to use idiomatic Python `try/except` blocks to address failures without having to parse strings to determine the cause of failure.[^31] See the Canonical Error Map in the API Reference for a complete list of translations between HTTP status codes and SDK exceptions.
 
 
-## References
+## 4. Documents Cited
 
 [^4]: PCI DSS Requirement 10: Track and Monitor All Access to Network Resources and Cardholder Data.
 [^30]: QBank Developer Documentation, "Error Code Directory."

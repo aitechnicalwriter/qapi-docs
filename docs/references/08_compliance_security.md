@@ -11,17 +11,11 @@ A comprehensive audit log must exist for each financial activity. Each API call,
 To provide auditable evidence, the logs contain:
 
 | Field | Description | Compliance Context |
-
 | :--- | :--- | :--- |
-
 | `timestamp` | Time recorded in UTC with millisecond accuracy.[^21] [^22]. | SOX (Audit Trail) |
-
 | `actor` | The authenticated Client ID or User Identity.[^22]. | SOX (User Accountability) |
-
 | `entity_impacted` | The impacted Account ID, Payment ID, etc.[^22]. | SOX (Data Accountability) |
-
 | `request_id` | Unique request ID for end-to-end tracing purposes.[^23] [^22]. | PCI DSS (Troubleshooting / Investigation) |
-
 | `idempotency_key` | Required for all transactional attempts (if applicable).[^17]. | SOX (Audit Trail) |
 
 ### 1.2. Non-Repudiation Header
@@ -29,9 +23,7 @@ To provide auditable evidence, the logs contain:
 For all transactional requests (POST, PUT, PATCH), a highly recommended audit compliance header should be used for each request that initiates from a user interface within the ERP.
 
 | Header Name | Value Format | Description |
-
 | :--- | :--- | :--- |
-
 | **`x-fapi-auth-date`** | HTTP-date (e.g., Tue, 11 Sep 2012 19:43:31 GMT) | The date/time the end-user (PSU) last authenticated with the client application.[^24]. |
 
 
@@ -57,7 +49,7 @@ QBank Connect employs a URL-based versioning strategy (i.e. /v1/).
 **Minor Versions:** Any changes that are non-breaking (adding new endpoints, adding optional fields, etc.) will be added to the current version of the API and will remain backwards compatible with previous versions.[^27] [^26]
 
 
-## References
+## 4. Documents Cited
 
 [^3]: QBank Internal Systems Manual, "Immutable Log Architecture."
 [^6]: QBank API Security Guide, "OAuth 2.0 Scope and RBAC Policies."
