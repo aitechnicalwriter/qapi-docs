@@ -1,83 +1,86 @@
 # QBank Connect API Documentation
 
-[![GitHub Pages deployment status](https://img.shields.io/github/actions/workflow/status/aitechnicalwriter/qapi-docs/pages/badge.svg)](https://github.com/aitechnicalwriter/qapi-docs/actions/workflows/pages.yml)
+[![GitHub Pages Deployment Status](https://img.shields.io/github/actions/workflow/status/aitechnicalwriter/qapi-docs/pages/badge.svg)](https://github.com/aitechnicalwriter/qapi-docs/actions/workflows/pages.yml)
+
 [![Documentation Build](https://img.shields.io/badge/docs-deployed-success.svg)](https://aitechnicalwriter.github.io/qapi-docs/)
+
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-
---- 
-
-## ⚠️ DISCLAIMER
-
-This documentation refers to **QBank Connect**, a **fictional financial institution and API**. This project was created strictly for **technical writing portfolio demonstration purposes** and does not interact with any real-world banking services, data, or systems.
 
 ---
 
-The official technical documentation for the QBank Connect API, covering conceptual architecture, integration guides, and regulatory compliance.
+Source repository for the website at **https://aitechnicalwriter.github.io/qapi-docs**.
 
-## View Live Documentation
+> Note: All the products, entities, and data in this guide are purely fictional. This is a tech writing **portfolio demo**.
 
-The complete, rendered documentation website is hosted on GitHub Pages:
+### Contents:
 
-**[QBank Connect Docs](https://aitechnicalwriter.github.io/qapi-docs/)**
+- **Tutorials:** Quickstart guide
 
-## About This Repository
+- **Explanations:** Architecture, Idempotency
 
-This repository hosts the source files for the QBank Connect API documentation website.
+- **Reference:** Endpoints, SDKs, Compliance, and Glossary
 
-### Key Content Areas:
 
-* **Conceptual Guides:** Explanations of payment workflows, $\text{OAuth 2.0}$ token lifecycle management, and architectural overviews.
-* **Compliance & Security:** Details on $\text{SOX}$, $\text{PCI DSS}$, and data security standards.
-* **SDK Integration:** Detailed guides and code examples for the official $\text{Python}$ and $\text{TypeScript}$ SDKs, emphasizing idiomatic error and idempotency handling.
-* **API Reference:** OpenAPI specification and structured endpoints.
+## Tooling
 
-## Technology Stack
+The documentation project has been built on the following tools:
 
-This documentation project is built using modern technical writing tools:
+* **Documentation Generation Tool:** [MkDocs](https://www.mkdocs.org/)
 
-* **Documentation Generator:** [MkDocs](https://www.mkdocs.org/)
 * **Theme:** [MkDocs Material](https://squidfunk.github.io/mkdocs-material/)
-* **Styling:** Custom $\text{CSS}$ for professional heading borders and typography.
-* **Deployment:** $\text{GitHub}$ Pages via the `mkdocs gh-deploy` command.
 
-## Development and Local Setup
+* **Styling:** Custom CSS styling for heading borders, typography
 
-To run and edit this documentation locally, you need Python and `pip`.
+* **Tooling for Deployment:** GitHub Pages (via `$\text{mkdocs gh-deploy}$`)
 
-### 1. Clone the Repository
+
+## System Requirements
+
+For local runs, you need Python and pip.
+
+
+### Step 1. Clone The Repository
 
 ```bash
+
 git clone [https://github.com/aitechnicalwriter/qapi-docs.git](https://github.com/aitechnicalwriter/qapi-docs.git)
+
 cd qapi-docs
+
 ```
-### 2. Install Dependencies
 
-Install $\text{MkDocs}$ and the Material theme:
+### Step 2. Install Dependencies
 
-```Bash
+Install **MkDocs**, and **Material** theme:
+
+```bash
+
 pip install mkdocs mkdocs-material
+
 ```
 
-### 3. Serve Locally
+### Step 3. Run The Server
 
-Run the development server to view changes in real-time.
+Start the **development server** so you can see the changes immediately:
 
-```Bash
+```bash
+
 mkdocs serve
+
 ```
 
-The documentation will be available in your browser at `http://127.0.0.1:8000`.
+Now you should be able to view the output at `http://127.0.0.1:8000`.
 
-### 4. Deployment
+### Step 4. Deploy
 
-When changes are complete and committed to the `master` branch, deploy the site using the built-in $\text{MkDocs}$ $\text{GitHub}$ Pages deployment tool. This pushes the compiled site to the `gh-pages` branch.
+Once you've finished editing, commit your changes to `master`. Then, use the **built-in** **MkDocs** **GitHub Pages deployment** tool to publish your site. This will publish the generated static site to `gh-pages`:
 
-```Bash
+```bash
+
 mkdocs gh-deploy
+
 ```
 
 ## License
 
-This documentation is released under the **MIT License**. For more information, please see the [LICENSE](LICENSE) file.
-
-
+Documentation is licensed under the **MIT License**. For more details on the licensing terms, please refer to the [LICENSE](LICENSE) file.

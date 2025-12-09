@@ -19,16 +19,17 @@ extra_css:
   
 nav:
   - Welcome: index.md
-  - Getting Started: 01_getting_started.md
-  - Conceptual Guides:
-    - Architecture Overview: conceptual_guides/02_conceptual_architecture.md
-    - Payment Workflows: conceptual_guides/03_payment_workflow.md
-  - Compliance & Security: 04_compliance_security.md
-  - API Reference: 05_api_reference.md
-  - SDK Integration:
-    - Python SDK: sdk_integration/sdk_python.md
-    - TypeScript SDK: sdk_integration/sdk_typescript.md
-  - Glossary: 06_glossary.md
+  - Tutorials:
+    - Getting Started: tutorials/01_getting_started.md
+  - Explanations:
+    - Architecture: explanations/02_architecture.md
+    - Payment Resilience: explanations/03_payment_resilience.md
+  - References:
+    - API Reference: references/05_api_reference.md
+    - Python SDK: references/06_sdk_python.md
+    - TypeScript SDK: references/07_sdk_typescript.md
+    - Compliance & Security: references/08_compliance_security.md
+    - Glossary: references/09_glossary.md
 
 plugins:
   - search
