@@ -8,9 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://aitechnicalwriter.github.io/qapi-docs/references/05_api_reference/">
+        <link rel="canonical" href="https://aitechnicalwriter.github.io/qapi-docs/references/05_api_overview/">
       
       
+        <link rel="prev" href="../../explanations/03_payment_resilience/">
+      
+      
+        <link rel="next" href="../../openapi-spec/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>API Reference - QBank Connect API Documentation</title>
+        <title>API Overview - QBank Connect API Documentation</title>
       
     
     
@@ -62,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#api-reference" class="md-skip">
+        <a href="#api-overview" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              API Reference
+              API Overview
             
           </span>
         </div>
@@ -398,20 +402,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -427,12 +431,290 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             References
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    API Overview
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Overview
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-service-details-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Service Details &amp; Authentication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Service Details &amp; Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-base-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Base URL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Security
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Endpoints
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-request-and-response-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Request and Response Headers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Request and Response Headers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-authorization-header" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Authorization Header
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-idempotency-header-mandatory-for-transactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Idempotency Header (Mandatory for Transactions)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-webhooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Webhooks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Webhooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-event-paymentstatusupdate" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Event: paymentStatusUpdate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-webhook-security-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Webhook Security Verification
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Error Handling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Error Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-standard-error-response-4xx-5xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. Standard Error Response (4xx, 5xx)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1. Standard Error Response (4xx, 5xx)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-error-response-body" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard Error Response Body
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-idempotency-conflict-response-http-409" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2. Idempotency Conflict Response (HTTP 409)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2. Idempotency Conflict Response (HTTP 409)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conflict-response-body-applicationproblemjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conflict Response Body (application/problem+json)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-data-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Data Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Data Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-auditfields-compliance-inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1. AuditFields (Compliance Inheritance)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-transaction-resource-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2. Transaction Resource Schema
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-documents-cited" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Documents Cited
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
             
               
                 
@@ -446,7 +728,7 @@
   
   
   <span class="md-ellipsis">
-    API Reference
+    API Console
     
   </span>
   
@@ -814,9 +1096,11 @@
   
 
 
-<h1 id="api-reference">API Reference</h1>
-<p>The QBank Connect API Reference is a comprehensive guide derived from the <strong>OpenAPI Specification (OAS 3.1)</strong>. It defines all required parameters, security constraints, and data schemas for integrating with QBank's treasury services.</p>
-<p>Our full machine readable OpenAPI Specification is located here: <a href="../../openapi-spec/qbank-api.yaml">qbank-api.yaml</a></p>
+<h1 id="api-overview">API Overview</h1>
+<p>This overview describes the <strong>core components</strong> of QBank Connect API.</p>
+<blockquote>
+<p>For the comprehensive machine-readable OpenAPI Specification, see the <a href="../../openapi-spec/"><strong>API Console</strong></a></p>
+</blockquote>
 <h2 id="1-service-details-authentication">1. Service Details &amp; Authentication</h2>
 <h3 id="11-base-url">1.1. Base URL</h3>
 <p>All API requests must be prefixed with the versioned base URL:
