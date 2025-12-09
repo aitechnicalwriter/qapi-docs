@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://aitw.github.io/qapi-docs/references/08_compliance_security/">
+        <link rel="canonical" href="https://aitechnicalwriter.github.io/qapi-docs/references/08_compliance_security/">
       
       
         <link rel="prev" href="../07_sdk_typescript/">
@@ -155,7 +155,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/aiTechnicalWriter/qapi-docs" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/aitechnicalwriter/qapi-docs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -200,7 +200,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/aiTechnicalWriter/qapi-docs" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/aitechnicalwriter/qapi-docs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -445,7 +445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05_api_reference/" class="md-nav__link">
+      <a href="../../api-viewer/" class="md-nav__link">
         
   
   
@@ -639,9 +639,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
+  <a href="#4-documents-cited" class="md-nav__link">
     <span class="md-ellipsis">
-      References
+      4. Documents Cited
     </span>
   </a>
   
@@ -788,9 +788,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
+  <a href="#4-documents-cited" class="md-nav__link">
     <span class="md-ellipsis">
-      References
+      4. Documents Cited
     </span>
   </a>
   
@@ -821,29 +821,71 @@
 <p>A comprehensive audit log must exist for each financial activity. Each API call, system status change &amp; mETL action is captured in an immutable, structured format (JSON).<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">1</a></sup> <sup id="fnref:21"><a class="footnote-ref" href="#fn:21">2</a></sup></p>
 <h2 id="11-mandatory-audit-log-fields">1.1. Mandatory Audit Log Fields</h2>
 <p>To provide auditable evidence, the logs contain:</p>
-<p>| Field | Description | Compliance Context |</p>
-<p>| :--- | :--- | :--- |</p>
-<p>| <code>timestamp</code> | Time recorded in UTC with millisecond accuracy.<sup id="fnref2:21"><a class="footnote-ref" href="#fn:21">2</a></sup> <sup id="fnref:22"><a class="footnote-ref" href="#fn:22">3</a></sup>. | SOX (Audit Trail) |</p>
-<p>| <code>actor</code> | The authenticated Client ID or User Identity.<sup id="fnref2:22"><a class="footnote-ref" href="#fn:22">3</a></sup>. | SOX (User Accountability) |</p>
-<p>| <code>entity_impacted</code> | The impacted Account ID, Payment ID, etc.<sup id="fnref3:22"><a class="footnote-ref" href="#fn:22">3</a></sup>. | SOX (Data Accountability) |</p>
-<p>| <code>request_id</code> | Unique request ID for end-to-end tracing purposes.<sup id="fnref:23"><a class="footnote-ref" href="#fn:23">4</a></sup> <sup id="fnref4:22"><a class="footnote-ref" href="#fn:22">3</a></sup>. | PCI DSS (Troubleshooting / Investigation) |</p>
-<p>| <code>idempotency_key</code> | Required for all transactional attempts (if applicable).<sup id="fnref:17"><a class="footnote-ref" href="#fn:17">5</a></sup>. | SOX (Audit Trail) |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Compliance Context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>timestamp</code></td>
+<td style="text-align: left;">Time recorded in UTC with millisecond accuracy.<sup id="fnref2:21"><a class="footnote-ref" href="#fn:21">2</a></sup> <sup id="fnref:22"><a class="footnote-ref" href="#fn:22">8</a></sup>.</td>
+<td style="text-align: left;">SOX (Audit Trail)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>actor</code></td>
+<td style="text-align: left;">The authenticated Client ID or User Identity.<sup id="fnref2:22"><a class="footnote-ref" href="#fn:22">8</a></sup>.</td>
+<td style="text-align: left;">SOX (User Accountability)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>entity_impacted</code></td>
+<td style="text-align: left;">The impacted Account ID, Payment ID, etc.<sup id="fnref3:22"><a class="footnote-ref" href="#fn:22">8</a></sup>.</td>
+<td style="text-align: left;">SOX (Data Accountability)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>request_id</code></td>
+<td style="text-align: left;">Unique request ID for end-to-end tracing purposes.<sup id="fnref:23"><a class="footnote-ref" href="#fn:23">9</a></sup> <sup id="fnref4:22"><a class="footnote-ref" href="#fn:22">8</a></sup>.</td>
+<td style="text-align: left;">PCI DSS (Troubleshooting / Investigation)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>idempotency_key</code></td>
+<td style="text-align: left;">Required for all transactional attempts (if applicable).<sup id="fnref:17"><a class="footnote-ref" href="#fn:17">10</a></sup>.</td>
+<td style="text-align: left;">SOX (Audit Trail)</td>
+</tr>
+</tbody>
+</table>
 <h3 id="12-non-repudiation-header">1.2. Non-Repudiation Header</h3>
 <p>For all transactional requests (POST, PUT, PATCH), a highly recommended audit compliance header should be used for each request that initiates from a user interface within the ERP.</p>
-<p>| Header Name | Value Format | Description |</p>
-<p>| :--- | :--- | :--- |</p>
-<p>| <strong><code>x-fapi-auth-date</code></strong> | HTTP-date (e.g., Tue, 11 Sep 2012 19:43:31 GMT) | The date/time the end-user (PSU) last authenticated with the client application.<sup id="fnref:24"><a class="footnote-ref" href="#fn:24">6</a></sup>. |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Header Name</th>
+<th style="text-align: left;">Value Format</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><code>x-fapi-auth-date</code></strong></td>
+<td style="text-align: left;">HTTP-date (e.g., Tue, 11 Sep 2012 19:43:31 GMT)</td>
+<td style="text-align: left;">The date/time the end-user (PSU) last authenticated with the client application.<sup id="fnref:24"><a class="footnote-ref" href="#fn:24">11</a></sup>.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="2-secure-transport-and-applications">2. Secure Transport and Applications</h2>
 <p>The following mandatory security policies apply to how you connect to QBank Connect to secure the data transport pipeline, and provide appropriate access to your environment.</p>
 <h3 id="21-tls-enforcement">2.1. TLS Enforcement</h3>
-<p>All connections to QBank Connect MUST use HTTPS (TLS 1.2 or higher) to provide secure communication over the web. If a connection is made using a less secure version of TLS, it will be denied immediately at the API Gateway layer to prevent man-in-the-middle attacks.<sup id="fnref:25"><a class="footnote-ref" href="#fn:25">7</a></sup>. X.509 certificates are used to verify the identity of the client, and provide encryption.<sup id="fnref2:25"><a class="footnote-ref" href="#fn:25">7</a></sup></p>
+<p>All connections to QBank Connect MUST use HTTPS (TLS 1.2 or higher) to provide secure communication over the web. If a connection is made using a less secure version of TLS, it will be denied immediately at the API Gateway layer to prevent man-in-the-middle attacks.<sup id="fnref:25"><a class="footnote-ref" href="#fn:25">3</a></sup>. X.509 certificates are used to verify the identity of the client, and provide encryption.<sup id="fnref2:25"><a class="footnote-ref" href="#fn:25">3</a></sup></p>
 <h2 id="22-role-based-access-control-rbac">2.2. Role-Based Access Control (RBAC)</h2>
-<p>Access to the services provided by QBank Connect are based on the OAuth 2.0 scopes that have been assigned to your client_id upon registration (i.e. transactions.read vs payments.ach.write). If you attempt to make a request against a resource for which you do not have permission, you will receive a 403 Forbidden response.<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">8</a></sup> <sup id="fnref:7"><a class="footnote-ref" href="#fn:7">9</a></sup></p>
+<p>Access to the services provided by QBank Connect are based on the OAuth 2.0 scopes that have been assigned to your client_id upon registration (i.e. transactions.read vs payments.ach.write). If you attempt to make a request against a resource for which you do not have permission, you will receive a 403 Forbidden response.<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">4</a></sup> <sup id="fnref:7"><a class="footnote-ref" href="#fn:7">5</a></sup></p>
 <h2 id="3-api-versioning-strategy">3. API Versioning Strategy</h2>
 <p>QBank Connect employs a URL-based versioning strategy (i.e. /v1/).</p>
-<p><strong>Major Version Changes (v1 to v2):</strong> These occur when breaking changes are introduced into the API (e.g. changing the structure of the payload, removing important fields, changing the way resources are routed through the API)<sup id="fnref:26"><a class="footnote-ref" href="#fn:26">10</a></sup>.</p>
-<p><strong>Minor Versions:</strong> Any changes that are non-breaking (adding new endpoints, adding optional fields, etc.) will be added to the current version of the API and will remain backwards compatible with previous versions.<sup id="fnref:27"><a class="footnote-ref" href="#fn:27">11</a></sup> <sup id="fnref2:26"><a class="footnote-ref" href="#fn:26">10</a></sup></p>
-<h2 id="references">References</h2>
+<p><strong>Major Version Changes (v1 to v2):</strong> These occur when breaking changes are introduced into the API (e.g. changing the structure of the payload, removing important fields, changing the way resources are routed through the API)<sup id="fnref:26"><a class="footnote-ref" href="#fn:26">6</a></sup>.</p>
+<p><strong>Minor Versions:</strong> Any changes that are non-breaking (adding new endpoints, adding optional fields, etc.) will be added to the current version of the API and will remain backwards compatible with previous versions.<sup id="fnref:27"><a class="footnote-ref" href="#fn:27">7</a></sup> <sup id="fnref2:26"><a class="footnote-ref" href="#fn:26">6</a></sup></p>
+<h2 id="4-documents-cited">4. Documents Cited</h2>
 <div class="footnote">
 <hr />
 <ol>
@@ -853,32 +895,32 @@
 <li id="fn:21">
 <p>PCI DSS Requirement 10: Track and Monitor All Access to Network Resources and Cardholder Data.&#160;<a class="footnote-backref" href="#fnref:21" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:21" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
-<li id="fn:22">
-<p>SOX Audit Control Requirements, Section 404 (Conceptual Reference).&#160;<a class="footnote-backref" href="#fnref:22" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:22" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:22" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:22" title="Jump back to footnote 3 in the text">&#8617;</a></p>
-</li>
-<li id="fn:23">
-<p>Distributed Tracing Standard, W3C Trace Context (Conceptual Reference).&#160;<a class="footnote-backref" href="#fnref:23" title="Jump back to footnote 4 in the text">&#8617;</a></p>
-</li>
-<li id="fn:17">
-<p>Idempotency Key Specification, RFC 8142 (Conceptual Reference).&#160;<a class="footnote-backref" href="#fnref:17" title="Jump back to footnote 5 in the text">&#8617;</a></p>
-</li>
-<li id="fn:24">
-<p>Open Banking (UK) Security Profile: FAPI Compliance and Authentication.&#160;<a class="footnote-backref" href="#fnref:24" title="Jump back to footnote 6 in the text">&#8617;</a></p>
-</li>
 <li id="fn:25">
-<p>NIST SP 800-52 Rev. 2: Guidelines for TLS Server Configuration.&#160;<a class="footnote-backref" href="#fnref:25" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:25" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+<p>NIST SP 800-52 Rev. 2: Guidelines for TLS Server Configuration.&#160;<a class="footnote-backref" href="#fnref:25" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:25" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 <li id="fn:6">
-<p>QBank API Security Guide, "OAuth 2.0 Scope and RBAC Policies."&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+<p>QBank API Security Guide, "OAuth 2.0 Scope and RBAC Policies."&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 4 in the text">&#8617;</a></p>
 </li>
 <li id="fn:7">
-<p>OAuth 2.0 Authorization Framework, RFC 6749 (Conceptual Reference).&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+<p>OAuth 2.0 Authorization Framework, RFC 6749 (Conceptual Reference).&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 5 in the text">&#8617;</a></p>
 </li>
 <li id="fn:26">
-<p>QBank API Design Standards, "Versioning Policy."&#160;<a class="footnote-backref" href="#fnref:26" title="Jump back to footnote 10 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:26" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+<p>QBank API Design Standards, "Versioning Policy."&#160;<a class="footnote-backref" href="#fnref:26" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:26" title="Jump back to footnote 6 in the text">&#8617;</a></p>
 </li>
 <li id="fn:27">
-<p>Semantic Versioning 2.0.0 (Conceptual Reference).&#160;<a class="footnote-backref" href="#fnref:27" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+<p>Semantic Versioning 2.0.0 (Conceptual Reference).&#160;<a class="footnote-backref" href="#fnref:27" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:22">
+<p>SOX Audit Control Requirements, Section 404 (Conceptual Reference).&#160;<a class="footnote-backref" href="#fnref:22" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:22" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:22" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:22" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:23">
+<p>Distributed Tracing Standard, W3C Trace Context (Conceptual Reference).&#160;<a class="footnote-backref" href="#fnref:23" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:17">
+<p>Idempotency Key Specification, RFC 8142 (Conceptual Reference).&#160;<a class="footnote-backref" href="#fnref:17" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:24">
+<p>Open Banking (UK) Security Profile: FAPI Compliance and Authentication.&#160;<a class="footnote-backref" href="#fnref:24" title="Jump back to footnote 11 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

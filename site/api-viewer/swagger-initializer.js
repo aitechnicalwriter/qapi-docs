@@ -1,6 +1,6 @@
 window.onload = function() {
   window.ui = SwaggerUIBundle({
-    url: "../openapi-spec/qbank-api.yaml",
+    url: "../../openapi-spec/qbank-api.yaml",
     dom_id: '#swagger-ui',
     deepLinking: true,
     presets: [

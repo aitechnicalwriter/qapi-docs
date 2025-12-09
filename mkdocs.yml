@@ -1,6 +1,6 @@
 site_name: QBank Connect API Documentation
-site_url: https://aitw.github.io/qapi-docs/
-repo_url: https://github.com/aiTechnicalWriter/qapi-docs
+site_url: https://aitechnicalwriter.github.io/qapi-docs/
+repo_url: https://github.com/aitechnicalwriter/qapi-docs
 repo_name: qapi-docs
 theme:
   name: material
@@ -25,7 +25,7 @@ nav:
     - Architecture: explanations/02_architecture.md
     - Payment Resilience: explanations/03_payment_resilience.md
   - References:
-    - API Reference: references/05_api_reference.md
+    - API Reference: api-viewer/index.html
     - Python SDK: references/06_sdk_python.md
     - TypeScript SDK: references/07_sdk_typescript.md
     - Compliance & Security: references/08_compliance_security.md
@@ -48,3 +48,6 @@ markdown_extensions:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
+
+extra_files:
+  - openapi-spec/
