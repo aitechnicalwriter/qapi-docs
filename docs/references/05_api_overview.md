@@ -1,8 +1,8 @@
-# API Reference
+# API Overview
 
-The QBank Connect API Reference is a comprehensive guide derived from the **OpenAPI Specification (OAS 3.1)**. It defines all required parameters, security constraints, and data schemas for integrating with QBank's treasury services.
+This overview describes the **core components** of QBank Connect API.
 
-Our full machine readable OpenAPI Specification is located here: [qbank-api.yaml](../openapi-spec/qbank-api.yaml)
+> For the comprehensive machine-readable OpenAPI Specification, see the [**API Console**](../openapi-spec/index.html)
 
 ## 1. Service Details & Authentication
 
