@@ -3,7 +3,7 @@ We can begin by using the **OAuth 2.0 Client Credentials Grant** to do B2B serve
 
 ## 1. Onboarding Process
 
-1.1. **Registering**: In order to get started, contact your QBank Account Manager to register your ERP System. Your Account Manager will give you a unique **`client_id`** and a safe **`client_secret`**.
+1.1. **Registering**: In order to get started, contact your QBank Account Manager to register your Platform. Your Account Manager will give you a unique **`client_id`** and a safe **`client_secret`**.
 
 1.2. **Scope Approval**: When registering, you will need to enter the specific **permissions (scopes)** that your application needs (i.e., `transactions.read`, `payments.ach.write`) as well as who has approval to make those requests.
 
@@ -18,25 +18,17 @@ You are going to use your `client_id` and `client_secret` to get a short-term **
 You send a `POST` to the token endpoint:
 
 | Field | Value |
-
 | :--- | :--- |
-
 | **Endpoint** | `POST https://auth.qbankconnect.com/token` |
-
 | **Content-Type** | `application/x-www-form-urlencoded` |
 
 **Request Body (Form URL Encoded)**
 
 | Parameter | Description |
-
 | :--- | :--- |
-
 | **grant_type** | It needs to be `client_credentials`. |
-
 | **client_id** | The unique ID provided when registering. |
-
 | **client_secret** | The secret key provided when registering. |
-
 | **scope** | The scope parameter needs to contain a space separated list of requested permissions (e.g., `accounts.read payments.ach.write`). |
 
 ### 2.2. Processing the Response
@@ -60,9 +52,7 @@ When sending a successful response, it includes the access token and the length 
 You will need to include the **`access_token`** in the **`Authorization`** header of each API call after obtaining the access token.
 
 | Header | Value |
-
 | :--- | :--- |
-
 | `Authorization` | `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...` |
 
 All of these steps are included in the QBank SDKs (including renewal and token expiration), so you don't need to handle the token lifecycle yourself (see [Python SDK](sdk_integration/sdk_python.md)).
@@ -72,11 +62,8 @@ All of these steps are included in the QBank SDKs (including renewal and token e
 You can retrieve the most recent balance of an account by calling the `/balances` endpoint; however, the call to the `/balances` endpoint is a **real-time synchronous** call to the core system.
 
 | Field | Value |
-
 | :--- | :--- |
-
 | **Endpoint** | `GET /v1/balances/{accountId}` |
-
 | **Scopes Required** | `balances.read` |
 
 

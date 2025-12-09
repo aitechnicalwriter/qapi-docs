@@ -10,6 +10,7 @@ In QBank systems, all large data exchanges are handled by the **mETL Engine**, a
 
 This diagram illustrates the hybrid data flow between third-party Transaction Management Platforms (“Platforms”), QBank Connect, the mETL Engine, and Fiserv.
 
+
 ```mermaid
 graph TD
 A[Platform]-->|"Real-Time:<br>GET /balances,<br>POST /transfers"|B["API Gateway"]

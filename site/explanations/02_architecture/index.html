@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://aitw.github.io/qapi-docs/sdk_integration/sdk_python/">
+        <link rel="canonical" href="https://aitw.github.io/qapi-docs/explanations/02_architecture/">
       
       
-        <link rel="prev" href="../../05_api_reference/">
+        <link rel="prev" href="../../tutorials/01_getting_started/">
       
       
-        <link rel="next" href="../sdk_typescript/">
+        <link rel="next" href="../03_payment_resilience/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Python SDK - QBank Connect API Documentation</title>
+        <title>Architecture - QBank Connect API Documentation</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#python-sdk-integration-guide" class="md-skip">
+        <a href="#architecture" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Python SDK
+              Architecture
             
           </span>
         </div>
@@ -241,28 +241,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../01_getting_started/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Getting Started
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
     
     
     
@@ -274,15 +252,15 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
-    Conceptual Guides
+    Tutorials
     
   </span>
   
@@ -290,10 +268,10 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Conceptual Guides
+            Tutorials
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -304,35 +282,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../conceptual_guides/02_conceptual_architecture/" class="md-nav__link">
+      <a href="../../tutorials/01_getting_started/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Architecture Overview
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../conceptual_guides/03_payment_workflow/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Payment Workflows
+    Getting Started
     
   </span>
   
@@ -354,50 +309,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../../04_compliance_security/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Compliance & Security
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../05_api_reference/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    API Reference
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -411,15 +322,15 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
-    SDK Integration
+    Explanations
     
   </span>
   
@@ -427,10 +338,10 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            SDK Integration
+            Explanations
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -455,7 +366,7 @@
   
   
   <span class="md-ellipsis">
-    Python SDK
+    Architecture
     
   </span>
   
@@ -468,7 +379,7 @@
   
   
   <span class="md-ellipsis">
-    Python SDK
+    Architecture
     
   </span>
   
@@ -491,42 +402,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-installation-and-setup" class="md-nav__link">
+  <a href="#1-the-metl-engine" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Installation and Setup
+      1. The mETL Engine
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-idempotency-abstraction-crucial" class="md-nav__link">
+  <a href="#2-a-hybrid-data-flow-api-to-core" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Idempotency Abstraction (Crucial)
+      2. A Hybrid Data Flow (API to Core)
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="2. Idempotency Abstraction (Crucial)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-safe-ach-submission-automatic-idempotency" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.1. Safe ACH Submission (Automatic Idempotency)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-type-safety-and-named-exceptions" class="md-nav__link">
+  <a href="#3-data-latency-described" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Type Safety and Named Exceptions
+      3. Data Latency Described
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-the-three-required-transaction-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. The Three Required Transaction Dates
     </span>
   </a>
   
@@ -557,12 +462,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../sdk_typescript/" class="md-nav__link">
+      <a href="../03_payment_resilience/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    TypeScript SDK
+    Payment Resilience
     
   </span>
   
@@ -586,8 +491,140 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    References
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            References
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../06_glossary/" class="md-nav__link">
+      <a href="../../references/05_api_reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/06_sdk_python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python SDK
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/07_sdk_typescript/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TypeScript SDK
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/08_compliance_security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Compliance & Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/09_glossary/" class="md-nav__link">
         
   
   
@@ -598,6 +635,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -629,42 +674,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-installation-and-setup" class="md-nav__link">
+  <a href="#1-the-metl-engine" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Installation and Setup
+      1. The mETL Engine
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-idempotency-abstraction-crucial" class="md-nav__link">
+  <a href="#2-a-hybrid-data-flow-api-to-core" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Idempotency Abstraction (Crucial)
+      2. A Hybrid Data Flow (API to Core)
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="2. Idempotency Abstraction (Crucial)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-safe-ach-submission-automatic-idempotency" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.1. Safe ACH Submission (Automatic Idempotency)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-type-safety-and-named-exceptions" class="md-nav__link">
+  <a href="#3-data-latency-described" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Type Safety and Named Exceptions
+      3. Data Latency Described
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-the-three-required-transaction-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. The Three Required Transaction Dates
     </span>
   </a>
   
@@ -698,64 +737,67 @@
   
 
 
-<h1 id="python-sdk-integration-guide">Python SDK Integration Guide</h1>
-<p>The QBank Python SDK is built to be type-safe and idiomatic, abstracting away OAuth 2.0 complexity and automatically managing transactional integrity.<sup id="fnref:30"><a class="footnote-ref" href="#fn:30">1</a></sup> <sup id="fnref:31"><a class="footnote-ref" href="#fn:31">2</a></sup></p>
-<h2 id="1-installation-and-setup">1. Installation and Setup</h2>
-<p>The SDK is available on PyPI:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>qbank-connect
-</span></code></pre></div>
-<p>Initialize the client using your <code>client_id</code> and <code>client_secret</code>. The SDK automatically initiates the OAuth 2.0 Client Credentials flow and handles token caching and refresh.<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">3</a></sup></p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">qbank_connect</span><span class="w"> </span><span class="kn">import</span> <span class="n">QBankConnectClient</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">qbank_connect.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">AchPaymentRequest</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">qbank_connect.errors</span><span class="w"> </span><span class="kn">import</span> <span class="n">QBankIdempotencyConflict</span><span class="p">,</span> <span class="n">QBankPermissionDeniedError</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># Client initializes and immediately fetches a Bearer Token</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">client</span> <span class="o">=</span> <span class="n">QBankConnectClient</span><span class="p">(</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;YOUR_CLIENT_ID&quot;</span><span class="p">,</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;YOUR_CLIENT_SECRET&quot;</span><span class="p">,</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="n">scopes</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;payments.ach.write&quot;</span><span class="p">,</span> <span class="s2">&quot;balances.read&quot;</span><span class="p">]</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">)</span>
-</span></code></pre></div>
-<h2 id="2-idempotency-abstraction-crucial">2. Idempotency Abstraction (Crucial)</h2>
-<p>For all transactional methods (e.g., <code>client.payments.create_ach()</code>), the SDK automatically generates a new UUID for the <code>Idempotency-Key</code> header on every call, <strong>unless you explicitly provide one</strong> for a retry scenario.<sup id="fnref:32"><a class="footnote-ref" href="#fn:32">4</a></sup></p>
-<h3 id="21-safe-ach-submission-automatic-idempotency">2.1. Safe ACH Submission (Automatic Idempotency)</h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># The SDK automatically generates a new Idempotency-Key for this call. </span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">ach_request</span> <span class="o">=</span> <span class="n">AchPaymentRequest</span><span class="p">(</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="n">source_account_id</span><span class="o">=</span><span class="s2">&quot;...&quot;</span><span class="p">,</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">recipient_details</span><span class="o">=</span><span class="p">{</span><span class="o">...</span><span class="p">},</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">amount</span><span class="o">=</span><span class="mf">1000.50</span><span class="p">,</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">effective_date</span><span class="o">=</span><span class="s2">&quot;2025-10-31&quot;</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">)</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="k">try</span><span class="p">:</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">payments</span><span class="o">.</span><span class="n">create_ach</span><span class="p">(</span><span class="n">request</span><span class="o">=</span><span class="n">ach_request</span><span class="p">)</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Payment request accepted. Status: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="k">except</span> <span class="n">QBankIdempotencyConflict</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    <span class="c1"># If a 409 Conflict is received, this exception is raised.</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    <span class="c1"># We catch it and check status instead of retrying immediately.</span>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Conflict detected. Checking transaction status: </span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">detail</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    <span class="c1"># Logic to call client.payments.get_payment_status(e.transaction_id)</span>
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="k">except</span> <span class="n">QBankPermissionDeniedError</span><span class="p">:</span>
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Authentication error: Check scopes and token.&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-<h2 id="3-type-safety-and-named-exceptions">3. Type Safety and Named Exceptions</h2>
-<p>The Python SDK uses Pydantic models for data objects.<sup id="fnref2:30"><a class="footnote-ref" href="#fn:30">1</a></sup> This ensures you benefit from type checking in your IDE, which significantly reduces the frequency of <code>400 Bad Request</code> errors.<sup id="fnref3:30"><a class="footnote-ref" href="#fn:30">1</a></sup></p>
-<p>The SDK translates all generic HTTP status codes (e.g., 403, 409, 500) into specific, actionable, named exceptions (e.g., <code>QBankIdempotencyConflict</code> for a 409).<sup id="fnref4:30"><a class="footnote-ref" href="#fn:30">1</a></sup> This allows developers to handle failures using idiomatic Python <code>try/except</code> blocks, focusing on application logic rather than fragile string parsing.<sup id="fnref2:31"><a class="footnote-ref" href="#fn:31">2</a></sup> Refer to the Canonical Error Mapping in the <strong>API Reference</strong> for a full list of status code translations.</p>
+<h1 id="architecture">Architecture</h1>
+<p>Qbank Connect integrates API technologies with legacy batch systems, resulting in a "hybrid" architecture.</p>
+<h2 id="1-the-metl-engine">1. The mETL Engine</h2>
+<p>In QBank systems, all large data exchanges are handled by the <strong>mETL Engine</strong>, a legacy batch ETL system. It performs nightly scheduled data syncs between the bank's internal databases and the <strong>Fiserv CoreAdvance</strong> core banking system. Due to this technical constraint, certain API endpoint DBs get refreshed only once a day.</p>
+<h2 id="2-a-hybrid-data-flow-api-to-core">2. A Hybrid Data Flow (API to Core)</h2>
+<p>This diagram illustrates the hybrid data flow between third-party Transaction Management Platforms (“Platforms”), QBank Connect, the mETL Engine, and Fiserv.</p>
+<pre class="mermaid"><code>graph TD
+A[Platform]--&gt;|"Real-Time:&lt;br&gt;GET /balances,&lt;br&gt;POST /transfers"|B["API Gateway"]
+A--&gt;|"Asynchronous:&lt;br&gt;POST /payments/ach"|B
+B--&gt;C["QBank Connect Service"&lt;br&gt;"and Payment Orchestration"&lt;br&gt;"System (POS)"]
+C--&gt;|"Immediate&lt;br&gt;Write"|D["QBank Connect DB"]
+D--&gt;|"Polls every 15 min"| E["mETL Engine"]
+E--&gt;|"Extract &amp; Transform - Fiserv Format"|F["Data Processing"]
+F--&gt;|"Fiserv Batch&lt;br&gt;Processing"|G["Fiserv CoreAdvance"]
+G--&gt;|"Nightly EOD&lt;br&gt;(End of Day) File"|F
+F--&gt;|"mETL EOD Job&lt;br&gt;(1:00 am PST)"|E
+E--&gt;|"Load (Daily Sync)"|D
+D--&gt;|"GET /transactions,&lt;br&gt;/accounts"|C</code></pre>
+<h2 id="3-data-latency-described">3. Data Latency Described</h2>
+<p>The hybrid approach used by this application results in all API requests being categorized into one of two main types of latency:</p>
+<p>| Category | Example Endpoints | Source | Description |</p>
+<p>| --- | --- | --- | --- |</p>
+<p>| <strong>Real-Time Synchronous</strong> | /balances , /transfers , /payments/wire | A direct call to the Fiserv API | Less than 1 second. <sup id="fnref:11"><a class="footnote-ref" href="#fn:11">1</a></sup><sup id="fnref:12"><a class="footnote-ref" href="#fn:12">2</a></sup> |</p>
+<p>| <strong>Batch-Latent Asynchronous</strong> | /accounts , /transactions , /reports/nsf , /reports/chargebacks | metL import from Fiserv loader | Data is current as of the previous business day. <sup id="fnref:13"><a class="footnote-ref" href="#fn:13">3</a></sup> |</p>
+<h2 id="4-the-three-required-transaction-dates">4. The Three Required Transaction Dates</h2>
+<p>For both reconciliation and treasury reporting purposes, there are three different date fields contained in the <code>Transaction</code> resource. To meet cash position requirements and other regulatory needs, all platform developers should be aware of the background for each date field. <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">4</a></sup></p>
+<p>| Field Name | Purpose | Source |</p>
+<p>| --- | --- | --- |</p>
+<p>| <strong><code>transaction_date</code></strong> | Initiated: The date and time when the customer/ERP initiated the transaction. | The client's core system/request |</p>
+<p>| <strong><code>value_date</code></strong> | Interest/Funds: The date upon which funds are actually credited/debited to compute interest accrual. <sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">4</a></sup> | Fiserv CoreAdvance |</p>
+<p>| <strong><code>posting_date</code></strong> | Available/Posted: The date and time the transaction record was inserted into the QBank Connect DB through the mETL engine and made available through the API. <sup id="fnref:14"><a class="footnote-ref" href="#fn:14">5</a></sup><sup id="fnref:15"><a class="footnote-ref" href="#fn:15">6</a></sup> | Fiserv CoreAdvance |</p>
 <h2 id="references">References</h2>
 <div class="footnote">
 <hr />
 <ol>
-<li id="fn:30">
-<p>QBank Developer Documentation, "Error Code Directory."&#160;<a class="footnote-backref" href="#fnref:30" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:30" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:30" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:30" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<li id="fn:11">
+<p>QBank Performance Testing Report, "Real-Time Endpoint Benchmarks."&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
-<li id="fn:31">
-<p>QBank Python SDK Readme, "Core Features and Design Principles."&#160;<a class="footnote-backref" href="#fnref:31" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:31" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<li id="fn:12">
+<p>Fiserv CoreAdvance API Integration Guide, "Direct Connect Latency."&#160;<a class="footnote-backref" href="#fnref:12" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
-<li id="fn:4">
-<p>PCI DSS Requirement 10: Track and Monitor All Access to Network Resources and Cardholder Data.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<li id="fn:13">
+<p>QBank mETL Operational Handbook, "Daily Sync and EOD Cutoff."&#160;<a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
-<li id="fn:32">
-<p>Python SDK Source Code, <code>qbank_connect/payments.py</code> (Idempotency Logic).&#160;<a class="footnote-backref" href="#fnref:32" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+<li id="fn:2">
+<p>QBank Whitepaper, "Transaction Date Standards and Compliance," v1.1.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:14">
+<p>QBank Connect Integration Guide, "Transaction Query Best Practices."&#160;<a class="footnote-backref" href="#fnref:14" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:15">
+<p>QBank Accounting Compliance Memo, "Posting Date Audit Requirement."&#160;<a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p>Fiserv CoreAdvance SFTP Specification, "Batch Communication Protocol."&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p>QBank mETL Engine Design Document, "Asynchronous Data Integration."&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p>QBank Connect SLA, "API Latency and Data Freshness Profiles."&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 9 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

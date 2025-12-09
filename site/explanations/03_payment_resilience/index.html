@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://aitw.github.io/qapi-docs/conceptual_guides/02_conceptual_architecture/">
+        <link rel="canonical" href="https://aitw.github.io/qapi-docs/explanations/03_payment_resilience/">
       
       
-        <link rel="prev" href="../../01_getting_started/">
+        <link rel="prev" href="../02_architecture/">
       
       
-        <link rel="next" href="../03_payment_workflow/">
+        <link rel="next" href="../../references/05_api_reference/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Architecture Overview - QBank Connect API Documentation</title>
+        <title>Payment Resilience - QBank Connect API Documentation</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#architecture-overview" class="md-skip">
+        <a href="#payment-resilience" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Architecture Overview
+              Payment Resilience
             
           </span>
         </div>
@@ -241,8 +241,48 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tutorials
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../01_getting_started/" class="md-nav__link">
+      <a href="../../tutorials/01_getting_started/" class="md-nav__link">
         
   
   
@@ -253,6 +293,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -282,7 +330,7 @@
   
   
   <span class="md-ellipsis">
-    Conceptual Guides
+    Explanations
     
   </span>
   
@@ -293,9 +341,32 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Conceptual Guides
+            Explanations
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -318,7 +389,7 @@
   
   
   <span class="md-ellipsis">
-    Architecture Overview
+    Payment Resilience
     
   </span>
   
@@ -331,7 +402,7 @@
   
   
   <span class="md-ellipsis">
-    Architecture Overview
+    Payment Resilience
     
   </span>
   
@@ -354,37 +425,61 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#bridging-real-time-and-batch" class="md-nav__link">
+  <a href="#1-transactional-idempotence-protocol" class="md-nav__link">
     <span class="md-ellipsis">
-      Bridging Real-Time and Batch
+      1. Transactional Idempotence Protocol.
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Bridging Real-Time and Batch">
+    <nav class="md-nav" aria-label="1. Transactional Idempotence Protocol.">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-the-hybrid-data-flow-api-to-core" class="md-nav__link">
+  <a href="#12-conflict-resolution-http-409" class="md-nav__link">
     <span class="md-ellipsis">
-      1. The Hybrid Data Flow (API to Core)
+      1.2. Conflict Resolution (HTTP 409).
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-payment-orchestration-finite-state-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Payment Orchestration Finite State Machine.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Notifications.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Notifications.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-webhook-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Webhook Events.
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-data-latency-explained" class="md-nav__link">
+  <a href="#32-signature-verification" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Data Latency Explained
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-the-three-mandatory-transaction-dates" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. The Three Mandatory Transaction Dates
+      3.2. Signature Verification.
     </span>
   </a>
   
@@ -413,76 +508,9 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../03_payment_workflow/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Payment Workflows
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../04_compliance_security/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Compliance & Security
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../05_api_reference/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    API Reference
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -504,15 +532,15 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
-    SDK Integration
+    References
     
   </span>
   
@@ -520,10 +548,10 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            SDK Integration
+            References
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -534,7 +562,30 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sdk_integration/sdk_python/" class="md-nav__link">
+      <a href="../../references/05_api_reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/06_sdk_python/" class="md-nav__link">
         
   
   
@@ -557,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sdk_integration/sdk_typescript/" class="md-nav__link">
+      <a href="../../references/07_sdk_typescript/" class="md-nav__link">
         
   
   
@@ -573,21 +624,37 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
+              
+                
   
   
   
   
     <li class="md-nav__item">
-      <a href="../../06_glossary/" class="md-nav__link">
+      <a href="../../references/08_compliance_security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Compliance & Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/09_glossary/" class="md-nav__link">
         
   
   
@@ -598,6 +665,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -629,37 +704,61 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#bridging-real-time-and-batch" class="md-nav__link">
+  <a href="#1-transactional-idempotence-protocol" class="md-nav__link">
     <span class="md-ellipsis">
-      Bridging Real-Time and Batch
+      1. Transactional Idempotence Protocol.
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Bridging Real-Time and Batch">
+    <nav class="md-nav" aria-label="1. Transactional Idempotence Protocol.">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-the-hybrid-data-flow-api-to-core" class="md-nav__link">
+  <a href="#12-conflict-resolution-http-409" class="md-nav__link">
     <span class="md-ellipsis">
-      1. The Hybrid Data Flow (API to Core)
+      1.2. Conflict Resolution (HTTP 409).
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-payment-orchestration-finite-state-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Payment Orchestration Finite State Machine.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Notifications.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Notifications.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-webhook-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Webhook Events.
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-data-latency-explained" class="md-nav__link">
+  <a href="#32-signature-verification" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Data Latency Explained
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-the-three-mandatory-transaction-dates" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. The Three Mandatory Transaction Dates
+      3.2. Signature Verification.
     </span>
   </a>
   
@@ -698,111 +797,70 @@
   
 
 
-<h1 id="architecture-overview">Architecture Overview</h1>
-<p>The QBank Connect architecture was designed to solve the critical challenge of connecting a modern, low-latency API to a legacy banking system. The following sections describe how this is achieved through a hybrid approach.</p>
-<h2 id="bridging-real-time-and-batch">Bridging Real-Time and Batch</h2>
-<p>QBank Connect operates on a hybrid architecture, designed to provide a modern, low-latency API experience while ensuring transactional integrity with the legacy <strong>Fiserv CoreAdvance</strong> core banking system.</p>
-<h3 id="1-the-hybrid-data-flow-api-to-core">1. The Hybrid Data Flow (API to Core)</h3>
-<p>The system relies on the <strong>mETL (Managed Extract, Transform, Load) Engine</strong> to manage asynchronous batch communications with Fiserv CoreAdvance via SFTP.<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">1</a></sup><sup id="fnref:9"><a class="footnote-ref" href="#fn:9">2</a></sup></p>
-<p>Here is the visualization of our data flow, which informs data freshness and latency for every endpoint:</p>
-<pre class="mermaid"><code>graph TD
-A[ERP Partner Platform]--&gt;|"Real-Time: GET /balances, POST /transfers"|B["QBank Connect API Gateway"]
-A--&gt;|"Asynchronous: POST /payments/ach"|B
-B--&gt;C{"QBank&lt;br&gt;Connect Service&lt;br&gt;&amp; POS"}
-C--&gt;|"Immediate Write"|D["QBank Connect DB"]
-D--&gt;|"Polls every 15 min"| E["mETL Engine"]
-E--&gt;|"Extract &amp; Transform - Fiserv Format"|F["Data Processing"]
-F--&gt;|"Fiserv Batch Processing - CoreAdvance"|G["Fiserv CoreAdvance Core"]
-G--&gt;|"Nightly EOD File - End of Day"|F
-F--&gt;|"mETL EOD Job - 1:00 am"|E
-E--&gt;|"Load - Daily Sync"|D
-D--&gt;|"GET /transactions, /accounts"|C</code></pre>
-<h3 id="2-data-latency-explained">2. Data Latency Explained</h3>
-<p>Due to this hybrid approach, API resources fall into two critical latency categories <sup id="fnref:10"><a class="footnote-ref" href="#fn:10">3</a></sup>:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Category</th>
-<th style="text-align: left;">Endpoint Examples</th>
-<th style="text-align: left;">Source</th>
-<th style="text-align: left;">Latency Profile</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Real-Time Synchronous</strong></td>
-<td style="text-align: left;"><code>/balances</code>, <code>/transfers</code>, <code>/payments/wire</code></td>
-<td style="text-align: left;">Direct Fiserv API Call</td>
-<td style="text-align: left;">Sub-second latency.<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">6</a></sup> <sup id="fnref:12"><a class="footnote-ref" href="#fn:12">7</a></sup></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Batch-Latent Asynchronous</strong></td>
-<td style="text-align: left;"><code>/accounts</code>, <code>/transactions</code>, <code>/reports/nsf</code>, <code>/reports/chargebacks</code></td>
-<td style="text-align: left;">QBank Connect DB (mETL Load)</td>
-<td style="text-align: left;">Data is updated once per day, available after the 1:00 am cutoff.<sup id="fnref:13"><a class="footnote-ref" href="#fn:13">8</a></sup></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Critical Note:</strong> Resources retrieved via Batch-Latent endpoints (e.g., Transactions) reflect the state of the account <strong>as of the end of the previous business day</strong>. Current-day activity will not appear in these reports until the next daily synchronization at 1:00 am.</p>
-<h3 id="3-the-three-mandatory-transaction-dates">3. The Three Mandatory Transaction Dates</h3>
-<p>For accurate financial reconciliation and treasury reporting, the transaction resource exposes three distinct date fields. ERP integrators must understand the context of each date for compliance and cash positioning <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">4</a></sup>:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Field Name</th>
-<th style="text-align: left;">Context</th>
-<th style="text-align: left;">Source</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong><code>transaction_date</code></strong></td>
-<td style="text-align: left;"><strong>Initiation:</strong> The date/time the customer/ERP initiated the activity.</td>
-<td style="text-align: left;">Core System / Client Request</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong><code>value_date</code></strong></td>
-<td style="text-align: left;"><strong>Interest/Funds:</strong> The date on which funds are technically applied or debited for interest accrual calculation.<sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
-<td style="text-align: left;">Fiserv CoreAdvance</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong><code>posting_date</code></strong></td>
-<td style="text-align: left;"><strong>Availability/Statement:</strong> The date/time the transaction record was loaded by the mETL engine into the QBank Connect DB and became available via the API (1:00 am cutoff).<sup id="fnref2:14"><a class="footnote-ref" href="#fn:14">5</a></sup> <sup id="fnref:15"><a class="footnote-ref" href="#fn:15">9</a></sup></td>
-<td style="text-align: left;">QBank Connect DB (mETL)</td>
-</tr>
-</tbody>
-</table>
-<p>When querying transactions, you should typically use the <strong><code>posting_date</code></strong> field for pagination and filtering to ensure you only retrieve fully synchronized and auditable records.<sup id="fnref:14"><a class="footnote-ref" href="#fn:14">5</a></sup></p>
+<h1 id="payment-resilience">Payment Resilience</h1>
+<p>If a connection error causes a payment request to fail, your Platform can safely repeat the request. QBank Connect API supports <strong>idempotency</strong> to prevent the risk of duplicate payments.<sup id="fnref:16"><a class="footnote-ref" href="#fn:16">1</a></sup></p>
+<h2 id="1-transactional-idempotence-protocol">1. Transactional Idempotence Protocol.</h2>
+<p>All transaction requests require the <strong><code>Idempotency-Key</code></strong> header containing a 36-character key value (Value Type: UUID V4). In the event that the request needs to be retried, this key provides a database constraint that prevents duplicate records.<sup id="fnref:17"><a class="footnote-ref" href="#fn:17">2</a></sup><sup id="fnref:18"><a class="footnote-ref" href="#fn:18">3</a></sup> </p>
+<p><strong>Sample Header:</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    -H &quot;Idempotency-Key: f47ac10b-58cc-4372-a567-0e02b2c3d479&quot; \
+</span></code></pre></div></p>
+<h3 id="12-conflict-resolution-http-409">1.2. Conflict Resolution (HTTP 409).</h3>
+<p>When a request is received successfully, the confirmation response can still fail. Your Platform <strong>mistakes the non-response as a sign of request failure</strong>, so it tries the request again. When QBank Connect finds that the first request is still processing, the second request is rejected with a <strong>409 Conflict</strong> error.</p>
+<p>The response body conforms to the standard <strong><code>application/problem+json</code></strong> structure:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="err">HTTP/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">409</span><span class="w"> </span><span class="err">Co</span><span class="kc">nfl</span><span class="err">ic</span><span class="kc">t</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="err">Li</span><span class="kc">n</span><span class="err">k</span><span class="p">:</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">ps</span><span class="p">:</span><span class="c1">//docs.qbankconnect.com/03_payment_workflow.md#transactional-idempotency-protocol; rel=&quot;describedby&quot;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="err">Co</span><span class="kc">ntent</span><span class="mi">-</span><span class="err">Type</span><span class="p">:</span><span class="w"> </span><span class="err">applica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">/problem+jso</span><span class="kc">n</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">{</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://api.qbankconnect.com/errors/idempotency_conflict&quot;</span><span class="p">,</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A request is outstanding for this Idempotency-Key&quot;</span><span class="p">,</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">409</span><span class="p">,</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="nt">&quot;detail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The payment submission with this key is already in the P_VALIDATED or P_SUBMITTED_TO_CORE state.&quot;</span><span class="p">,</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="nt">&quot;instance&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a2b3c4d5-6e7f-8g9h-0i1j-2k3l4m5n6o7p&quot;</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="2-payment-orchestration-finite-state-machine">2. Payment Orchestration Finite State Machine.</h2>
+<p>All payment requests are tracked by the <strong>Payment Orchestration Service (POS)</strong> using a finite state machine. <sup id="fnref:19"><a class="footnote-ref" href="#fn:19">4</a></sup> <sup id="fnref:20"><a class="footnote-ref" href="#fn:20">5</a></sup></p>
+<p>| State | Transition Event | Actor/System | Latency |</p>
+<p>| --- | --- | --- | --- |</p>
+<p>| <strong><code>P_CREATED</code></strong> | A <code>POST /payments/ach</code> request is submitted. | ERP Platform / API | Instant |</p>
+<p>| <strong><code>P_VALIDATED</code></strong> | Validations succeed (schema, funds). | QBank Connect Service | Sub-Second |</p>
+<p>| <strong><code>P_SUBMITTED_TO_CORE</code></strong> | The mETL Engine job successfully places the batch file into the Fiserv SFTP Location. | mETL Engine | 15 Minutes (Max) |</p>
+<p>| <strong><code>P_PROCESSING</code></strong> | The Fiserv CoreAdvance confirms receipt and begins processing the transaction. | Fiserv CoreAdvance | EOD (Variable) |</p>
+<p>| <strong><code>P_COMPLETED</code></strong> | Final Settlement Confirmation Received. | mETL / POS | Next Business Day |</p>
+<p>| <strong><code>P_FAILED</code></strong> | Either rejected by Core Advance, or validation failed. | Core Advance / POS | Immediate or Batch |</p>
+<h2 id="3-notifications">3. Notifications.</h2>
+<p>For payable confirmations, QBank Connect provides guaranteed delivery of status updates via webhooks. <sup id="fnref2:16"><a class="footnote-ref" href="#fn:16">1</a></sup></p>
+<h3 id="31-webhook-events">3.1. Webhook Events.</h3>
+<p>When a significant state transition occurs (i.e. from <code>P_PROCESSING</code> to <code>P_COMPLETED</code>) the <strong>Webhook Notification Service (WNS)</strong> sends an event payload to your registered callback URL. The headers include:</p>
+<ul>
+<li>
+<p><strong>Webhook-Event-ID:</strong>  An identifier for this webhook delivery attempt.</p>
+</li>
+<li>
+<p><strong>Webhook-Signature:</strong> The HMAC signature that verifies that a). The payload originated from QBank Connect, b). The payload contents have not been tampered with.</p>
+</li>
+</ul>
+<h3 id="32-signature-verification">3.2. Signature Verification.</h3>
+<p>In order to prevent impersonation and ensure non-repudiation of events received, your Platform must verify the <code>Webhook-Signature</code> header against the payload using the shared secret provided by QBank Connect. <strong>Any events received without a valid signature should be discarded</strong>.</p>
 <h2 id="references">References</h2>
 <div class="footnote">
 <hr />
 <ol>
-<li id="fn:8">
-<p>Fiserv CoreAdvance SFTP Specification, "Batch Communication Protocol."&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<li id="fn:16">
+<p>QBank Connect API Reference, "Payment Status and Webhook Integration."&#160;<a class="footnote-backref" href="#fnref:16" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:16" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
-<li id="fn:9">
-<p>QBank mETL Engine Design Document, "Asynchronous Data Integration."&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<li id="fn:17">
+<p>Idempotency Key Specification, RFC 8142.&#160;<a class="footnote-backref" href="#fnref:17" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
-<li id="fn:10">
-<p>QBank Connect SLA, "API Latency and Data Freshness Profiles."&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<li id="fn:18">
+<p>Payments API Integration Guide, "Handling Duplicate Submissions."&#160;<a class="footnote-backref" href="#fnref:18" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
-<li id="fn:2">
-<p>QBank Whitepaper, "Transaction Date Standards and Compliance," v1.1.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+<li id="fn:19">
+<p>Payment Orchestration Service (POS) State Diagram, Internal Document.&#160;<a class="footnote-backref" href="#fnref:19" title="Jump back to footnote 4 in the text">&#8617;</a></p>
 </li>
-<li id="fn:14">
-<p>QBank Connect Integration Guide, "Transaction Query Best Practices."&#160;<a class="footnote-backref" href="#fnref:14" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:14" title="Jump back to footnote 5 in the text">&#8617;</a></p>
-</li>
-<li id="fn:11">
-<p>QBank Performance Testing Report, "Real-Time Endpoint Benchmarks."&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 6 in the text">&#8617;</a></p>
-</li>
-<li id="fn:12">
-<p>Fiserv CoreAdvance API Integration Guide, "Direct Connect Latency."&#160;<a class="footnote-backref" href="#fnref:12" title="Jump back to footnote 7 in the text">&#8617;</a></p>
-</li>
-<li id="fn:13">
-<p>QBank mETL Operational Handbook, "Daily Sync and EOD Cutoff."&#160;<a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 8 in the text">&#8617;</a></p>
-</li>
-<li id="fn:15">
-<p>QBank Accounting Compliance Memo, "Posting Date Audit Requirement."&#160;<a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+<li id="fn:20">
+<p>Fiserv CoreAdvance Batch Processing Guide, "Payment Lifecycle States."&#160;<a class="footnote-backref" href="#fnref:20" title="Jump back to footnote 5 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

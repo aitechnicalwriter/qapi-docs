@@ -10,8 +10,8 @@ theme:
     - content.code.annotate
     - content.code.copy
     - navigation.expand
-    - content.tabs.link # Recommended for general content flow
-    - content.diagrams  # CRITICAL: This enables Mermaid rendering in the theme
+    - content.tabs.link 
+    - content.diagrams 
   logo: assets/images/q_icon.png
 
 extra_css:
@@ -36,12 +36,14 @@ plugins:
 
 markdown_extensions:
   - footnotes
+  - tables
+  - admonition
+  - pymdownx.details
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
