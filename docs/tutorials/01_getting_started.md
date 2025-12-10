@@ -11,11 +11,11 @@ We can begin by using the **OAuth 2.0 Client Credentials Grant** to do B2B serve
 
 ## 2. Using OAuth 2.0 Client Credential Flow
 
-You are going to use your `client_id` and `client_secret` to get a short-term **Bearer Token** from us.
+Use your `client_id` and `client_secret` to get a short-term **Bearer Token** from QBank.
 
 ### 2.1. Get an Access Token
 
-You send a `POST` to the token endpoint:
+Send a `POST` to the token endpoint:
 
 | Field | Value |
 | :--- | :--- |
@@ -55,11 +55,11 @@ You will need to include the **`access_token`** in the **`Authorization`** heade
 | :--- | :--- |
 | `Authorization` | `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...` |
 
-All of these steps are included in the QBank SDKs (including renewal and token expiration), so you don't need to handle the token lifecycle yourself (see [Python SDK](sdk_integration/sdk_python.md)).
+All of these steps are included in the QBank SDKs (including renewal and token expiration), so you don't need to handle the token lifecycle yourself.
 
 ## 3. Quick Start: Retrieving a Current Balance
 
-You can retrieve the most recent balance of an account by calling the `/balances` endpoint; however, the call to the `/balances` endpoint is a **real-time synchronous** call to the core system.
+You can retrieve the most recent balance of an account by calling the `/balances` endpoint; the balance is current as of the previous business day.
 
 | Field | Value |
 | :--- | :--- |

@@ -151,13 +151,3 @@ The `Transaction` schema includes three distinct date fields crucial for financi
 | `value_date` | `string` (`date`) | **Interest/Funds:** The date funds are actually credited/debited for interest accrual. |
 | `posting_date` | `string` (`date-time`) | **Available/Posted:** The date the record was inserted into the QBank Connect DB and made available via API (EOD sync). |
 
-
-## 4. Documents Cited
-
-[^10]: QBank Connect SLA, "API Latency and Data Freshness Profiles."
-[^12]: Fiserv CoreAdvance API Integration Guide, "Direct Connect Latency."
-[^15]: QBank Accounting Compliance Memo, "Posting Date Audit Requirement."
-[^22]: SOX Audit Control Requirements, Section 404 (Conceptual Reference).
-[^28]: ACH Operating Rules and Guidelines (Conceptual Reference).
-[^29]: Positive Pay System Requirements, ABA Standards (Conceptual Reference).
-[^30]: QBank Developer Documentation, "Error Code Directory."
