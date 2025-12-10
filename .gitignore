@@ -1,0 +1,5 @@
+# Ignore the generated site folder
+site/
+
+# Ignore other artifacts
+.DS_Store
