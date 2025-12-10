@@ -763,7 +763,7 @@
 <h1 id="architecture">Architecture</h1>
 <p>Qbank Connect integrates API technologies with legacy batch systems, resulting in a "hybrid" architecture.</p>
 <h2 id="1-the-metl-engine">1. The mETL Engine</h2>
-<p>In QBank systems, all large data exchanges are handled by the <strong>mETL Engine</strong>, a legacy batch ETL system. It performs nightly scheduled data syncs between the bank's internal databases and the <strong>Fiserv CoreAdvance</strong> core banking system. <sup id="fnref:8"><a class="footnote-ref" href="#fn:8">1</a></sup>, <sup id="fnref:9"><a class="footnote-ref" href="#fn:9">2</a></sup>, <sup id="fnref:10"><a class="footnote-ref" href="#fn:10">3</a></sup> Due to this technical constraint, certain API endpoint DBs get refreshed only once a day.</p>
+<p>In QBank systems, all large data exchanges are handled by the <strong>mETL Engine</strong>, a legacy batch ETL system. It performs nightly scheduled data syncs between the bank's internal databases and the <strong>Fiserv CoreAdvance</strong> core banking system. <sup id="fnref:8"><a class="footnote-ref" href="#fn:8">1</a></sup> <sup id="fnref:9"><a class="footnote-ref" href="#fn:9">2</a></sup> <sup id="fnref:10"><a class="footnote-ref" href="#fn:10">3</a></sup> Due to this technical constraint, certain API endpoint DBs get refreshed only once a day.</p>
 <h2 id="2-hybrid-data-flow-api-to-core">2. Hybrid Data Flow (API to Core)</h2>
 <p>This diagram illustrates the hybrid data flow between third-party Transaction Management Platforms (“Platforms”), QBank Connect, the mETL Engine, and Fiserv.</p>
 <pre class="mermaid"><code>graph TD
