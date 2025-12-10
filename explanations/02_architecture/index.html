@@ -763,7 +763,7 @@
 <h1 id="architecture">Architecture</h1>
 <p>Qbank Connect integrates API technologies with legacy batch systems, resulting in a "hybrid" architecture.</p>
 <h2 id="1-the-metl-engine">1. The mETL Engine</h2>
-<p>In QBank systems, all large data exchanges are handled by the <strong>mETL Engine</strong>, a legacy batch ETL system. It performs nightly scheduled data syncs between the bank's internal databases and the <strong>Fiserv CoreAdvance</strong> core banking system. Due to this technical constraint, certain API endpoint DBs get refreshed only once a day.</p>
+<p>In QBank systems, all large data exchanges are handled by the <strong>mETL Engine</strong>, a legacy batch ETL system. It performs nightly scheduled data syncs between the bank's internal databases and the <strong>Fiserv CoreAdvance</strong> core banking system. <sup id="fnref:8"><a class="footnote-ref" href="#fn:8">1</a></sup>, <sup id="fnref:9"><a class="footnote-ref" href="#fn:9">2</a></sup>, <sup id="fnref:10"><a class="footnote-ref" href="#fn:10">3</a></sup> Due to this technical constraint, certain API endpoint DBs get refreshed only once a day.</p>
 <h2 id="2-hybrid-data-flow-api-to-core">2. Hybrid Data Flow (API to Core)</h2>
 <p>This diagram illustrates the hybrid data flow between third-party Transaction Management Platforms (“Platforms”), QBank Connect, the mETL Engine, and Fiserv.</p>
 <pre class="mermaid"><code>graph TD
@@ -794,18 +794,18 @@ D--&gt;|"GET /transactions, /accounts"|C</code></pre>
 <td><strong>Real-Time Synchronous</strong></td>
 <td>/balances , /transfers , /payments/wire</td>
 <td>A direct call to the Fiserv API</td>
-<td>Less than 1 second. <sup id="fnref:11"><a class="footnote-ref" href="#fn:11">2</a></sup><sup id="fnref:12"><a class="footnote-ref" href="#fn:12">3</a></sup></td>
+<td>Less than 1 second. <sup id="fnref:11"><a class="footnote-ref" href="#fn:11">5</a></sup><sup id="fnref:12"><a class="footnote-ref" href="#fn:12">6</a></sup></td>
 </tr>
 <tr>
 <td><strong>Batch-Latent Asynchronous</strong></td>
 <td>/accounts , /transactions , /reports/nsf , /reports/chargebacks</td>
 <td>metL import from Fiserv loader</td>
-<td>Data is current as of the previous business day. <sup id="fnref:13"><a class="footnote-ref" href="#fn:13">4</a></sup></td>
+<td>Data is current as of the previous business day. <sup id="fnref:13"><a class="footnote-ref" href="#fn:13">7</a></sup></td>
 </tr>
 </tbody>
 </table>
 <h2 id="4-the-three-required-transaction-dates">4. The Three Required Transaction Dates</h2>
-<p>For both reconciliation and treasury reporting purposes, there are three different date fields contained in the <code>Transaction</code> resource. To meet cash position requirements and other regulatory needs, all platform developers should be aware of the background for each date field. <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">1</a></sup></p>
+<p>For both reconciliation and treasury reporting purposes, there are three different date fields contained in the <code>Transaction</code> resource. To meet cash position requirements and other regulatory needs, all platform developers should be aware of the background for each date field. <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">4</a></sup></p>
 <table>
 <thead>
 <tr>
@@ -822,12 +822,12 @@ D--&gt;|"GET /transactions, /accounts"|C</code></pre>
 </tr>
 <tr>
 <td><strong><code>value_date</code></strong></td>
-<td>Interest/Funds: The date upon which funds are actually credited/debited to compute interest accrual. <sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">1</a></sup></td>
+<td>Interest/Funds: The date upon which funds are actually credited/debited to compute interest accrual. <sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
 <td>Fiserv CoreAdvance</td>
 </tr>
 <tr>
 <td><strong><code>posting_date</code></strong></td>
-<td>Available/Posted: The date and time the transaction record was inserted into the QBank Connect DB through the mETL engine and made available through the API. <sup id="fnref:14"><a class="footnote-ref" href="#fn:14">5</a></sup><sup id="fnref:15"><a class="footnote-ref" href="#fn:15">6</a></sup></td>
+<td>Available/Posted: The date and time the transaction record was inserted into the QBank Connect DB through the mETL engine and made available through the API. <sup id="fnref:14"><a class="footnote-ref" href="#fn:14">8</a></sup><sup id="fnref:15"><a class="footnote-ref" href="#fn:15">9</a></sup></td>
 <td>Fiserv CoreAdvance</td>
 </tr>
 </tbody>
@@ -836,32 +836,32 @@ D--&gt;|"GET /transactions, /accounts"|C</code></pre>
 <div class="footnote">
 <hr />
 <ol>
-<li id="fn:2">
-<p>QBank Whitepaper, "Transaction Date Standards and Compliance," v1.1.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-<li id="fn:11">
-<p>QBank Performance Testing Report, "Real-Time Endpoint Benchmarks."&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 2 in the text">&#8617;</a></p>
-</li>
-<li id="fn:12">
-<p>Fiserv CoreAdvance API Integration Guide, "Direct Connect Latency."&#160;<a class="footnote-backref" href="#fnref:12" title="Jump back to footnote 3 in the text">&#8617;</a></p>
-</li>
-<li id="fn:13">
-<p>QBank mETL Operational Handbook, "Daily Sync and EOD Cutoff."&#160;<a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 4 in the text">&#8617;</a></p>
-</li>
-<li id="fn:14">
-<p>QBank Connect Integration Guide, "Transaction Query Best Practices."&#160;<a class="footnote-backref" href="#fnref:14" title="Jump back to footnote 5 in the text">&#8617;</a></p>
-</li>
-<li id="fn:15">
-<p>QBank Accounting Compliance Memo, "Posting Date Audit Requirement."&#160;<a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 6 in the text">&#8617;</a></p>
-</li>
 <li id="fn:8">
-<p>Fiserv CoreAdvance SFTP Specification, "Batch Communication Protocol."&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+<p>Fiserv CoreAdvance SFTP Specification, "Batch Communication Protocol."&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:9">
-<p>QBank mETL Engine Design Document, "Asynchronous Data Integration."&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+<p>QBank mETL Engine Design Document, "Asynchronous Data Integration."&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:10">
-<p>QBank Connect SLA, "API Latency and Data Freshness Profiles."&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+<p>QBank Connect SLA, "API Latency and Data Freshness Profiles."&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>QBank Whitepaper, "Transaction Date Standards and Compliance," v1.1.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:11">
+<p>QBank Performance Testing Report, "Real-Time Endpoint Benchmarks."&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:12">
+<p>Fiserv CoreAdvance API Integration Guide, "Direct Connect Latency."&#160;<a class="footnote-backref" href="#fnref:12" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:13">
+<p>QBank mETL Operational Handbook, "Daily Sync and EOD Cutoff."&#160;<a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:14">
+<p>QBank Connect Integration Guide, "Transaction Query Best Practices."&#160;<a class="footnote-backref" href="#fnref:14" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:15">
+<p>QBank Accounting Compliance Memo, "Posting Date Audit Requirement."&#160;<a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 9 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
