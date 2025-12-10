@@ -4,7 +4,7 @@ Qbank Connect integrates API technologies with legacy batch systems, resulting i
 
 ## 1. The mETL Engine
 
-In QBank systems, all large data exchanges are handled by the **mETL Engine**, a legacy batch ETL system. It performs nightly scheduled data syncs between the bank's internal databases and the **Fiserv CoreAdvance** core banking system. [^8], [^9], [^10] Due to this technical constraint, certain API endpoint DBs get refreshed only once a day.
+In QBank systems, all large data exchanges are handled by the **mETL Engine**, a legacy batch ETL system. It performs nightly scheduled data syncs between the bank's internal databases and the **Fiserv CoreAdvance** core banking system. [^8] [^9] [^10] Due to this technical constraint, certain API endpoint DBs get refreshed only once a day.
 
 ## 2. Hybrid Data Flow (API to Core)
 
