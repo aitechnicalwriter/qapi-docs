@@ -48,11 +48,11 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/aitechnicalwriter
   
-  # Manually defining the Open Graph tags often works better than the plugin defaults
+  # This explicitly tells the theme to create the og:image tag
   opengraph:
     image: https://aitechnicalwriter.github.io/qapi-docs/assets/images/qapi-linkedin.png
-    title: QBank Connect API Documentation
-    description: Professional API documentation and integration guide for the QBank Connect ecosystem.
+    title: CASE STUDY: API Documentation for QBank Connect
+    description: API documentation and integration guide for the QBank Connect API.
     
 markdown_extensions:
   - footnotes
