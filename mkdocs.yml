@@ -34,7 +34,26 @@ nav:
 
 plugins:
   - search
+  - ultralytics:
+      add_image: True
+      default_image: https://aitechnicalwriter.github.io/qapi-docs/assets/images/qapi-linkedin.png
+      add_desc: True
 
+plugins:
+  - search
+  # Keep ultralytics if you want the other features, but we'll add explicit tags below
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/aitechnicalwriter
+  
+  # Manually defining the Open Graph tags often works better than the plugin defaults
+  opengraph:
+    image: https://aitechnicalwriter.github.io/qapi-docs/assets/images/qapi-linkedin.png
+    title: QBank Connect API Documentation
+    description: Professional API documentation and integration guide for the QBank Connect ecosystem.
+    
 markdown_extensions:
   - footnotes
   - tables
