@@ -4,6 +4,7 @@ repo_url: https://github.com/aitechnicalwriter/qapi-docs
 repo_name: qapi-docs
 theme:
   name: material
+  custom_dir: includes  # This is the missing link!
   features:
     - navigation.instant
     - navigation.instant.prefetch
