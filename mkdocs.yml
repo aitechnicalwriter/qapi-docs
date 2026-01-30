@@ -34,6 +34,7 @@ nav:
 
 plugins:
   - search
+  - cards # This is the specific Material for MkDocs plugin for Open Graph
   - ultralytics:
       add_image: True
       default_image: https://aitechnicalwriter.github.io/qapi-docs/assets/images/qapi-linkedin.png
@@ -44,10 +45,14 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/aitechnicalwriter
   
+  # This section matches the Material theme requirements for social previews
+  social_cards:
+    image: assets/images/qapi-linkedin.png
+  
   opengraph:
     image: https://aitechnicalwriter.github.io/qapi-docs/assets/images/qapi-linkedin.png
-    title: CASE STUDY - API Documentation for QBank Connect.
-    description: API documentation and integration guide for QBank Connect API.
+    title: CASE STUDY - API Documentation for QBank Connect
+    description: API documentation and integration guide for QBank Connect API
     
 markdown_extensions:
   - footnotes
